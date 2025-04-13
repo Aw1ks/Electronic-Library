@@ -8,6 +8,7 @@ def add_book(num_books):
             file.write(f"\nShelf_{shelf_location} : {book_data}")
     return "Книги добавлены."
 
+
 def display_library():
     try:
         with open("library.txt", "r") as file:
@@ -15,6 +16,7 @@ def display_library():
                 print(line.strip())
     except FileNotFoundError:
         print("Файл библиотеки не найден.")
+
 
 def main():
     try:
@@ -24,6 +26,7 @@ def main():
         display_library()
     except ValueError:
         print("Ошибка: Введите целое число для количества книг.")
+
 
 if __name__ == '__main__':
     main()
